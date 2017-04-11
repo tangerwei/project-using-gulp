@@ -1,0 +1,24 @@
+{
+  "name": "project-using-gulp",
+  "version": "1.0.0",
+  "description": "this project is used to help me study gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp":"gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangerwei/project-using-gulp.git"
+  },
+  "author": "Tangerwei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tangerwei/project-using-gulp/issues"
+  },
+  "homepage": "https://github.com/tangerwei/project-using-gulp#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {}
+}
