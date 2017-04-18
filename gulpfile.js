@@ -1,5 +1,6 @@
 const gulp = require('gulp'); 
 const spriter = require("gulp-spriter");
+const sass = require('gulp-sass');
 // gulp.task("css",function(){
 //   return gulp.src("./src/css/style.css")
 //          .pipe(spriter({
@@ -28,4 +29,10 @@ gulp.task('platformCss',function(){
     outpath:'./build/images'
   }))
   .pipe(gulp.dest('./build/style'));
+});
+
+gulp.task('sass',function(){
+  return gulp.src('./demo/sass/*.scss')
+  .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+  .pipe(gulp.dest('./build/sass'));
 });

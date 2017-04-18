@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+        }
+        .detail{
+            height: 3000px;
+            /*为了显示宽度占满*/
+            width: 1000px;
+        }
+        .back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.1)
+        }
+        .dialog{
+            height: 40px;
+            width: 40px;
+            background-color: #fff;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail">实际内容</div>
+        <div class="back"></div>
+    </div>
+    <div class="dialog">
+        登录
+    </div>
+</body>
+</html>

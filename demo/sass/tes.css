@@ -1,0 +1,674 @@
+#productMngContainer {
+    height: 100%;
+}
+
+#productMngContainer div, input, textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#productMngContainer .footer{
+    font-size: 16px;
+}
+
+#productMngContainer .header {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: rgb(73, 75, 88);
+    font-weight: bold;
+    text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+    padding: 0 15px;
+}
+
+#productMngContainer .header span {
+    border-left: solid 3px rgb(44, 167, 222);
+    padding-left: 10px;
+}
+
+#productMngTable {
+    height: calc(100% - 60px);
+    padding: 10px;
+    background-color: #fcfcf2;
+    border-top: 1px solid #ededdb;
+}
+
+#productMngTable thead {
+    font-size: 14px;
+    font-family: "SimSun";
+}
+
+#productMngContainer .headertitle {
+    height: 60px;
+    float: left;
+    line-height: 60px;
+}
+
+#productMngContainer .productPkgPageSearchCont {
+    position: relative;
+    height: 60px;
+    width: 284px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#productMngContainer .productPkgPageSearchCont input {
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    border: solid 1px rgb(226, 226, 226);
+    background-color: #fff;
+    width: 100%;
+    height: 35px;
+    top: 50%;
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    padding: 0 10px;
+}
+
+#productMngContainer .productPkgAddBtnCont {
+    float: right;
+    width: 128px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+#productMngContainer .productsearch {
+    width: 20px;
+    background-image: url(../images/wordsearch.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 10;
+    right: 12px;
+    height: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+#productPkgAddBtn {
+    border: 1px solid rgb(89, 127, 137);
+    border-radius: 2px;
+    background-color: rgb(46, 162, 215);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+#productPkgAddBtn::before {
+    content: url(../images/platformAddBtn.png);
+    margin-right: 10px;
+}
+
+#productMngTable .platformopt {
+    font-size: 14px;
+    font-family: "SimSun";
+    color: rgb(46, 162, 215);
+    float: left;
+    width: 50%;
+    cursor: pointer;
+}
+
+.productShow {
+    display: block;
+}
+
+.productHidden {
+    display: none;
+}
+
+#productAddContainer {
+    height: 100%;
+}
+
+#productAddContainer div, input, textarea, select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#productAddContainer .header {
+    height: 60px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    color: rgb(73, 75, 88);
+    font-weight: bold;
+    padding: 0 15px;
+    border-bottom: 1px solid #ebebe8;
+}
+
+#productAddContainer .backBtn {
+    border: 1px solid rgb(89, 127, 137);
+    border-radius: 2px;
+    background-color: rgb(46, 162, 215);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    float: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#productAddContainer .backBtn img {
+    float: left;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+
+#productAddContainer .headertitle {
+    float: left;
+    margin-left: 10px;
+    border-left: 1px solid gray;
+    padding: 10px;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+#productAddContainer .body {
+    height: calc(100% - 120px);
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(252, 252, 242);
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    border-bottom: 1px solid #ebebe8;
+}
+
+#productAddContainer .col1, .col2 {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+    padding: 15px 30px;
+}
+
+#productAddContainer .col1 {
+    border-right: 1px solid #ebebe8;
+}
+
+#productAddContainer .row {
+    height: 50px;
+    margin: 10px 0;
+    padding: 5px 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Adobe Heiti Std";
+    color: rgb(121, 121, 121);
+}
+
+#productAddContainer .row input:disabled {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(198, 198, 198);
+    background-color: rgb(224, 224, 224);
+    width: 167px;
+}
+
+#productAddContainer .row input {
+    background-color: #fff;
+    border: solid 1px rgb(198, 198, 198);
+    height: 100%;
+    padding: 0 10px;
+}
+
+#productAddContainer .row select {
+    background-color: #fff;
+    border: solid 1px rgb(198, 198, 198);
+}
+
+#productAddContainer .row.contA {
+    margin-bottom: 0;
+}
+
+#productAddContainer .row.contB {
+    margin-top: 0;
+}
+
+#productAddContainer .row label {
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    min-width: 125px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 18px;
+    font-family: "SimSun";
+    color: rgb(121, 121, 121);
+    -moz-transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    -webkit-transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    -ms-transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    ;
+}
+
+#productAddContainer .row>span {
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    min-width: 110px;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 18px;
+    font-family: "SimSun";
+    color: rgb(121, 121, 121);
+    -moz-transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    -webkit-transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    -ms-transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+    transform: matrix( 1.00275909505752, 0, 0, 0.96673069551196, 0, 0);
+}
+
+#productAddContainer .row select {
+    height: 100%;
+    margin-right: 10px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#productAddQuota, #productAddOvQuota {
+    width: 87px;
+}
+
+#productAddAssetTags {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+}
+
+.selectItem {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background: url(../images/lecture_list/down_arrow.png) no-repeat scroll;
+    border: 1px solid rgb(226, 226, 226);
+    background-position: calc(100% - 7px) calc(100% - 10px);
+    width: 82px;
+}
+
+.selectItem option {
+    height: 40px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+#productAddContainer .footer {
+    height: 60px;
+    padding-right: 15px;
+}
+
+#productAddContainer .footer div, #productAddorg .footer div, #productDel .footer div {
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(89, 127, 137);
+    width: 153px;
+    height: 42px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+#productAdd_ok, #productAddorg_ok, #productDel_ok {
+    background-color: rgb(46, 162, 215);
+}
+
+#productAdd_cancel, #productAddorg_cancel, #productDel_cancel {
+    background-color: rgb(93, 161, 192);
+}
+
+#productStartTime_icon, #productEndTime_icon, #productTicketEndTime_icon {
+    background: url(../images/product_date.png);
+    width: 16px;
+    height: 16px;
+    transform: translate(-26px, 12px);
+    -webkit-transform: translate(-26px, 12px);
+    -moz-transform: translate(-26px, 12px);
+    -ms-transform: translate(-26px, 12px);
+    cursor: pointer;
+    float: right;
+}
+
+.timeCont {
+    position: relative;
+    height: 100%;
+}
+
+#timeContStart, #timeContEnd {
+    position: absolute;
+    left: 0;
+    top: 40px;
+}
+
+#productAddContainer .row.colums-2 {
+    height: 110px;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+}
+
+#productAddContainer #productAddOrgCont_btn {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(89, 127, 137);
+    background-color: rgb(46, 162, 215);
+    margin-left: 10px;
+    padding: 0;
+    height: 35px;
+    line-height: 35px;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+#productAddOrgCont {
+    flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    height: 100%;
+    border: 1px solid rgb(198, 198, 198);
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 10px;
+}
+
+#productTicketValid {
+    width: 74px;
+}
+
+#productDescription {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+    resize: none;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid rgb(198, 198, 198);
+}
+
+#productAddorg {
+    width: 920px;
+    height: 396px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 103;
+    background-color: #fff;
+    border: 1px solid rgb(23, 123, 169);
+    box-shadow: inset 0px 39px 0px 0px rgba(46, 162, 215, 0.004);
+}
+
+#productAddorg .header {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background-color: #2ea2d7;
+    color: #fff;
+    font-size: 18px;
+    font-family: "HiraginoSansGB";
+    text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+    padding: 0 20px;
+}
+
+#productAddorgBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 102;
+    background-color: rgba(0, 0, 0, 0.298039);
+}
+
+#productAddorg div {
+    box-sizing: border-box;
+}
+
+#productAddorg .body {
+    padding: 15px 10px 0px 10px;
+    height: calc(100% - 105px);
+    overflow: hidden;
+}
+
+#productAddorg .closeIcon {
+    float: right;
+    background-image: url(../images/word_library_dialog.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#productAddorg .table-header {
+    height: 35px;
+    border: 1px solid rgb(198, 198, 198);
+}
+
+#productAddorg .table-body {
+    height: calc(100% - 35px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid rgb(198, 198, 198);
+    border-top: none;
+}
+
+#productAddorg_ok {
+    margin-right: 17px;
+}
+
+#productAddorg .table-body-item {
+    height: 49px;
+    width: 33.33%;
+    float: left;
+    border: 1px solid rgb(198, 198, 198);
+    border-top: none;
+    border-left: none;
+}
+
+#productAddorg .checkboxCont {
+    float: left;
+    height: 100%;
+    width: 49px;
+    text-align: center;
+    padding-top: 18px;
+    border-right: 1px solid rgb(198, 198, 198);
+}
+
+#productAddorg .checklabelCont {
+    float: left;
+    height: 100%;
+    width: calc(100% - 49px);
+    text-align: center;
+    line-height: 49px;
+}
+
+#product_id {
+    width: 167px;
+}
+
+#productName {
+    width: 297px;
+}
+
+#productType {
+    width: 227px;
+}
+
+#productStartTime, #productEndTime {
+    width: 146px;
+}
+
+#product_courseID {
+    width: 137px;
+}
+
+#product_courseID_input {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+}
+
+#productTicketEndTime {
+    width: 148px;
+}
+
+#productBuyLimit {
+    width: 167px;
+}
+
+#product_Price, #product_Price_c {
+    width: 77px;
+}
+
+#product_exchange_points {
+    width: 166px;
+}
+
+#productAddOrgCont .platformItems {
+    float: left;
+    line-height: 30px;
+    font-size: 15px;
+    position: relative;
+    padding-right: 30px;
+    padding-left: 10px;
+    background-color: rgb(46, 162, 215);
+    color: #fff;
+    border: solid 1px rgb(93, 161, 192);
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+#productAddOrgCont .platformItems:first-child {
+    margin-left: 0;
+}
+
+#productDelBack {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 102;
+    background-color: rgba(0, 0, 0, 0.298039);
+}
+
+#productDel, #productDel div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#productDel {
+    border: 1px solid rgb(23, 123, 169);
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 39px 0px 0px rgba(46, 162, 215, 0.004);
+    width: 468px;
+    height: 264px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 103;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#productDel .header {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    background-color: #2ea2d7;
+    color: #fff;
+    font-size: 18px;
+    font-family: "HiraginoSansGB";
+    text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+    padding: 0 20px;
+}
+
+#productDel .closeIcon {
+    float: right;
+    background-image: url(../images/word_library_dialog.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#productDel .body {
+    margin: 10px 20px 0 20px;
+    padding: 15px 10px 0px 10px;
+    height: calc(100% - 120px);
+}
+
+#productDel .platformdelnotice {
+    float: left;
+    height: 100%;
+    width: 30%;
+}
+
+#productDel .platformdelnotice img {
+    width: 100%;
+    height: auto;
+}
+
+#productDel .productDelMes {
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    color: rgb(121, 121, 121);
+    float: right;
+    width: 70%;
+    text-align: center;
+    height: 108px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+#productDel_ok {
+    margin-right: 13px;
+}
+
+#product_Price, #product_Price_c, #productTicketValid {
+    margin-right: 10px;
+}

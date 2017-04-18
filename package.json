@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp platformCss"
+    "gulp": "gulp sass"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
+    "gulp-sass": "^3.1.0",
     "gulp.spritesmith": "^6.4.0"
   }
 }

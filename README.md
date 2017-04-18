@@ -14,3 +14,16 @@ install gulp.spritesmith
 install gulp-spriter
 
 # need to solve Date 2017-04-11 16:12:12
+
+#add sass plugin of gulp
+npm install gulp-sass (--save-dev)
+
+sass({outputStyle:'compressed'})
+<1>
+nested 继承
+<2>
+compact 紧凑
+<3>
+expanded 展开
+<4>
+compressed 压缩
