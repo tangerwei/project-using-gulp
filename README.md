@@ -16,6 +16,7 @@ install gulp-spriter
 # need to solve Date 2017-04-11 16:12:12
 
 #add sass plugin of gulp
+before you install gulp-sass,should install python and add the environment path
 npm install gulp-sass (--save-dev)
 
 sass({outputStyle:'compressed'})
