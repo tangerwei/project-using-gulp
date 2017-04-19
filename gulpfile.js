@@ -1,6 +1,7 @@
 const gulp = require('gulp'); 
 const spriter = require("gulp-spriter");
 const sass = require('gulp-sass');
+const stripCssComments = require('gulp-strip-css-comments');
 // gulp.task("css",function(){
 //   return gulp.src("./src/css/style.css")
 //          .pipe(spriter({
@@ -34,5 +35,6 @@ gulp.task('platformCss',function(){
 gulp.task('sass',function(){
   return gulp.src('./demo/sass/*.scss')
   .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+  .pipe(stripCssComments())
   .pipe(gulp.dest('./build/sass'));
 });

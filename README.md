@@ -28,3 +28,5 @@ compact 紧凑
 expanded 展开
 <4>
 compressed 压缩
+
+#add a plugin to remove Annotations
