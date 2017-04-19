@@ -1,0 +1,15 @@
+@import '../commonSass/myCommonStyle.scss';
+#test {
+    height: 600px;
+    @include commonInit();
+    @include management();
+}
+
+#test2 {
+    @include commonInit();
+    @include dialog(400px, 600px);
+}
+
+.back {
+    @include back();
+}

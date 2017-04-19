@@ -1,0 +1,326 @@
+/*define style config*/
+
+//input
+$bg-input:#fff;
+$input-border-style:solid 1px rgb(226, 226, 226);
+$bg-input-disabled:rgb(224, 224, 224);
+//button
+$bg-btn-ok:rgb(46, 162, 215);
+$bg-btn-cancel:rgb(93, 161, 192);
+$border-btn:1px solid rgb(89, 127, 137);
+//bg of dialog header
+$bg-dialog-header:rgb(46, 162, 215);
+$back-zindex:100;
+//style set of body
+$font-body-size:18px;
+@mixin font-body($fontSize:16px, $fontfamily: "Microsoft YaHei", $fontweight: bold) {
+    font-size: $fontSize;
+    font-family: $fontfamily;
+    font-weight: $fontweight;
+}
+
+@mixin font-btn($fontSize:16px) {
+    font-size: $fontSize;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+}
+
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+}
+
+@mixin abs-center-y {
+    top: 50%;
+    @include translate(0, -50%);
+}
+
+@mixin abs-center-x {
+    left: 50%;
+    @include translate(-50%, 0);
+}
+
+@mixin pointer-btn {
+    cursor: pointer;
+}
+
+@mixin input-common-style($width, $padding:0 10px) {
+    width: $width;
+    padding: $padding;
+    border: $input-border-style;
+    background-color: $bg-input;
+}
+
+@mixin div-like-input {
+    border: $input-border-style;
+    background-color: $bg-input;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 10px;
+}
+
+@mixin search($height:60px, $height-input:35px) {
+    position: relative;
+    height: $height;
+    width: 284px;
+    display: inline-block;
+    margin-left: 20px;
+    &>input {
+        @include search-input($height-input);
+    }
+    &>div {
+        @include search-icon-btn();
+    }
+}
+
+@mixin search-input($height:35px) {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    height: $height;
+    @include abs-center-y();
+    @include input-common-style(284px);
+}
+
+@mixin search-icon-btn($url:"../images/wordsearch.png") {
+    width: 20px;
+    height: 20px;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    @include abs-center-y();
+    @include pointer-btn();
+}
+
+@mixin btn-common($height) {
+    display: block;
+    border: $border-btn;
+    border-radius: 2px;
+    color: #fff;
+    @include pointer-btn();
+    height: $height;
+    line-height: $height;
+}
+
+@mixin button-with-icon($url) {
+    @include btn-common(40px);
+    background-color: rgb(46, 162, 215);
+    @include font-btn();
+    &:before {
+        content: url($url);
+        margin-right: 10px;
+    }
+}
+
+
+/*
+<div class="header">
+    <div class="title"><span>title</span></div>
+    <div class="search">
+        <input />
+        <div></div>
+    </div>
+    <div class="button">新增</div>
+</div>
+*/
+
+@mixin header-type-1($height:60px, $url:"../images/platformAddBtn.png") {
+    height: $height;
+    &>.title {
+        display: block;
+        height: $height;
+        float: left;
+        line-height: $height;
+        &>span {
+            border-left: solid 3px rgb(44, 167, 222);
+            padding-left: 10px;
+            @include font-btn();
+            color: rgb(73, 75, 88);
+            text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+        }
+    }
+    &>.search {
+        @include search($height);
+    }
+    &>.button {
+        float: right;
+        min-width: 128px;
+        height: 40px;
+        margin-top: ($height - 40px)/2;
+        text-align: center;
+        @include button-with-icon($url);
+        text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+    }
+}
+
+@mixin management($height-header:60px, $height-body:calc(100% - 60px)) {
+    &>.header {
+        @include header-type-1($height-header);
+    }
+    &>.body {
+        height: $height-body;
+        @include body();
+    }
+}
+
+@mixin close-icon() {
+    float: right;
+    background-image: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    margin-top: 7px;
+    margin-right: 7px;
+    @include pointer-btn();
+}
+
+@mixin header-type-2($height:35px) {
+    height: $height;
+    line-height: $height;
+    color: #fff;
+    background-color: $bg-dialog-header;
+    &>label {
+        font-size: 18px;
+        font-family: "HiraginoSansGB";
+        text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+        padding: 0 10px 0 20px;
+    }
+    &>span {
+        @include close-icon();
+    }
+}
+
+@mixin back($zindex:100) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex;
+    background-color: rgba(0, 0, 0, 0.298039);
+}
+
+@mixin footer-buttons($height:60px) {
+    height: $height;
+    padding-top: ($height - 42px)/2;
+    padding-right: 10px;
+    &>div {
+        float: right;
+        @include btn-common(42px);
+        min-width: 153px;
+        text-align: center;
+        &:first-child {
+            background-color: $bg-btn-ok;
+        }
+        &:last-child {
+            background-color: $bg-btn-cancel;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+/*
+<div class='date'>
+    <div>
+        <input />
+        <div></div>
+    </div>
+    <div></div>
+</div>
+*/
+
+@mixin date($width, $height, $url:"../images/product_date.png") {
+    height: $height;
+    width: $width;
+    &>div:first-child {
+        height: $height;
+        width: $width + 16px;
+        &>input {
+            height: $height;
+            width: $width;
+            padding: 0 26px 0 10px;
+        }
+        &>div {
+            background: url($url);
+            width: 16px;
+            height: 16px;
+            @include translate(-24px, ($height - 16px)/2);
+            cursor: pointer;
+            float: right;
+        }
+    }
+}
+
+
+/*load body component*/
+
+@mixin body {
+    @include font-body(18px, "SimSun", normal);
+    input {
+        border: $input-border-style;
+        background-color: $bg-input;
+        @include font-body(12px, "SimSun", normal);
+    }
+    input:disabled {
+        background-color: $bg-input-disabled;
+    }
+    .date {
+        @include date(146px, 40px);
+    }
+}
+
+@mixin dialog($height, $width, $header-height:35px, $height-footer:60px) {
+    height: $height;
+    width: $width;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: $back-zindex + 1;
+    border: 1px solid rgb(23, 123, 169);
+    background-color: $bg-input;
+    @include translate(-50%, -50%);
+    &>.header {
+        @include header-type-2($header-height);
+    }
+    &>.body {
+        height: $height - ($header-height + $height-footer);
+        padding: 15px 10px 0px 10px;
+        @include body();
+    }
+    &>.footer {
+        @include footer-buttons($height-footer);
+    }
+}
+
+//helper
+@mixin commonInit {
+    @include user-select();
+    @include borderBox();
+}
+
+@mixin user-select {
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+}
+
+@mixin borderBox {
+    & * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
