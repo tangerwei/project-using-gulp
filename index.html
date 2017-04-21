@@ -16,7 +16,7 @@
         }
     </style>
     <script type="text/javascript" src="./jquery.min.js"></script>
-    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=m8cyfOuBsRSLGdcHK0uAmKXZZuAB1fOE&s=1"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=6O3q20RbXj9WG5wfY0ED4wM4qjnGvYEX&s=1"></script>
     <title>地图展示</title>
 </head>
 
@@ -30,7 +30,7 @@
         window.$ = jQuery;
     }
     function getPlace(lng, lat) {
-        var url = 'https://api.map.baidu.com/geocoder/v2/?' + "callback=renderReverse&location=" + lat + "," + lng + "&output=json&pois=1&ak=m8cyfOuBsRSLGdcHK0uAmKXZZuAB1fOE&s=1";
+        var url = 'https://api.map.baidu.com/geocoder/v2/?' + "callback=renderReverse&location=" + lat + "," + lng + "&output=json&pois=1&ak=6O3q20RbXj9WG5wfY0ED4wM4qjnGvYEX&s=1";
         $.getJSON(url,
             function (json) {
                 console.log('success');
