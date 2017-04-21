@@ -30,3 +30,6 @@ expanded 展开
 compressed 压缩
 
 #add a plugin to remove Annotations
+
+#how to change insert mode and normal mode in vim
+<1>
