@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body,
+        html,
+        #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RukHwN5grIG1lkOAeIRUWMsO"></script>
+    <script src="map.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="allmap" style="height: 50%"></div>
+    <script>
+        var map = new IMap("allmap");
+            map.getLocal();
+            //设置起点
+            map.setIcon("徐汇区", {
+                url: 'start.png',
+                width: 32,
+                height: 32
+            });
+            //设置终点
+            map.setIcon("长宁区", {
+                url: 'end.png',
+                width: 32,
+                height: 32
+            });
+            //画线
+            map.startDraw();
+    </script>
+</body>
+
+</html>
