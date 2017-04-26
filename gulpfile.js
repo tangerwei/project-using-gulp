@@ -1,4 +1,4 @@
-const gulp = require('gulp'); 
+const gulp = require('gulp');
 const spriter = require("gulp-spriter");
 const sass = require('gulp-sass');
 const stripCssComments = require('gulp-strip-css-comments');
@@ -22,19 +22,35 @@ const stripCssComments = require('gulp-strip-css-comments');
 //   .pipe(gulp.dest('./build/style'));
 // });
 
-gulp.task('platformCss',function(){
+gulp.task('platformCss', function () {
   gulp.src("./demo/style/style.css")
-  .pipe(spriter({
-    sprite:'style.png',
-    slice:'./demo/images',
-    outpath:'./build/images'
-  }))
-  .pipe(gulp.dest('./build/style'));
+    .pipe(spriter({
+      sprite: 'style.png',
+      slice: './demo/images',
+      outpath: './build/images'
+    }))
+    .pipe(gulp.dest('./build/style'));
 });
 
-gulp.task('sass',function(){
+gulp.task('sass', function () {
   return gulp.src('./demo/sass/*.scss')
-  .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-  .pipe(stripCssComments())
-  .pipe(gulp.dest('./build/sass'));
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(stripCssComments())
+    .pipe(gulp.dest('./build/sass'));
 });
+const babel = require('gulp-babel');
+gulp.task('jsx', function () {
+  return gulp.src('code/jsx/*.jsx')
+    .pipe(babel({
+      presets: ["env", "es2015", "react"]
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('buildcode', function () {
+  gulp.src('code/jsx/*.jsx')
+    .pipe(babel({
+      presets: ["env", "es2015", "react"]
+    }))
+    .pipe(gulp.dest('./code/dist'));
+})

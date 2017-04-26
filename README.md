@@ -33,3 +33,14 @@ compressed 压缩
 
 add project to save code
 # add a map demo
+
+#note width babel
+<ul>
+<li>babel-cli</li>
+<li>babel-preset-es2015</li>
+<li>babel-preset-env</li>
+<li>babel-preset-react</li>
+</ul>
+
+if you want to use babel with gulp
+and you have to install gulp-babel additional
