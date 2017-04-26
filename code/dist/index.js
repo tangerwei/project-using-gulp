@@ -1,8 +1,8 @@
 "use strict";
 
-var dd = React.createElement(
+var div2 = React.createElement(
   "div",
   null,
   "this is true world"
 );
-ReactDOM.render(React.createElement("dd", null), document.getElementById("main"));
+ReactDOM.render(div2, document.getElementById("main"));
