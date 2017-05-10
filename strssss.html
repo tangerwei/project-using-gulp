@@ -9,11 +9,12 @@
 </head>
 
 <body>
+    <div id="result"></div>
     <script>
         window.onload = function () {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    console.log(position);
+                    document.getElementById('result').appendChild(document.createTextNode("success"));
                 });
             }
         }
