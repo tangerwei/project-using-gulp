@@ -1,15 +1,5 @@
 @import '../commonSass/common-v2-0-0.scss';
-#test {
-    height: 600px;
+#orderManageList {
     @include commonInit();
     @include management();
-}
-
-#test2 {
-    @include commonInit();
-    @include dialog(400px, 600px);
-}
-
-.back {
-    @include back();
 }

@@ -33,11 +33,19 @@ gulp.task('platformCss', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./demo/sass/*.scss')
+  return gulp.src('./demo/sass/demo.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(stripCssComments())
     .pipe(gulp.dest('./build/sass'));
 });
+
+gulp.task('websass', function () {
+  return gulp.src('./webSite/use.scss')
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(stripCssComments())
+    .pipe(gulp.dest('./webSite/css'));
+});
+
 const babel = require('gulp-babel');
 gulp.task('jsx', function () {
   return gulp.src('code/jsx/*.jsx')
@@ -47,10 +55,26 @@ gulp.task('jsx', function () {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('buildcode_edit', function () {
+  gulp.src('code/jsx/*.jsx')
+    .pipe(babel({
+      presets: ["env", "es2015", "react"]
+    }))
+    .pipe(gulp.dest('./code/dist'));
+  gulp.src('./code/scss/*.scss')
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(stripCssComments())
+    .pipe(gulp.dest('./code/css'));
+})
+
 gulp.task('buildcode', function () {
   gulp.src('code/jsx/*.jsx')
     .pipe(babel({
       presets: ["env", "es2015", "react"]
     }))
     .pipe(gulp.dest('./code/dist'));
+  gulp.src('./code/scss/*.scss')
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(stripCssComments())
+    .pipe(gulp.dest('./code/css'));
 })

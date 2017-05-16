@@ -44,3 +44,5 @@ add project to save code
 
 if you want to use babel with gulp
 and you have to install gulp-babel additional
+
+#for(var i = 0;i<document.getElementsByTagName('iframe').length;i++){document.getElementsByTagName('iframe')[i].style.display = "none"}

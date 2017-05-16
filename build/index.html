@@ -11,50 +11,16 @@
 </head>
 
 <body>
-    <div id="test">
+    <div id="orderManageList">
         <div class="header">
-            <div class="title"><span>title</span></div>
+            <div class="title"><span>预约排课</span></div>
             <div class="search">
                 <input />
                 <div></div>
             </div>
-            <div id="add" class="button">
-                新增
-            </div>
         </div>
         <div class="body"></div>
     </div>
-    <div id="test2" class="show">
-        <div class="header">
-            <label>新增数字</label>
-            <span></span>
-        </div>
-        <div class="body">
-            <div class='date'>
-                <div>
-                    <input />
-                    <div></div>
-                </div>
-                <div></div>
-            </div>
-        </div>
-        <div class="footer">
-            <div>ok</div>
-            <div id="cancel">cancel</div>
-        </div>
-    </div>
-    <div class="back" style="display:none;"></div>
-    <script>
-        var $ = function(id){
-            return document.getElementById(id);
-        }
-        $('cancel').onclick = function(){
-            $('test2').className = 'hide';
-        }
-        $('add').onclick = function(){
-            $('test2').className = 'show';
-        }
-    </script>
 </body>
 
 </html>
