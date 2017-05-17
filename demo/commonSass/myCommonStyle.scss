@@ -161,27 +161,6 @@ $font-body-size:18px;
 @mixin management($height-header:60px, $height-body:calc(100% - 60px)) {
     &>.header {
         @include header-type-1($height-header);
-        &>.buttonList {
-            display: inline-block;
-            &>div {
-                border-style: solid;
-                border-width: 1px;
-                border-color: #fff;
-                border-radius: 2px;
-                display: inline-block;
-                height: $height-header - 10px;
-                @include abs-center-y();
-                &:first-child {
-                    padding-left: 10px;
-                }
-                &.checked {
-
-                }
-                &.unchecked {
-
-                }
-            }
-        }
     }
     &>.body {
         height: $height-body;

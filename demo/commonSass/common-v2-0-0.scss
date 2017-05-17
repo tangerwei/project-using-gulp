@@ -68,7 +68,7 @@ $font-body-size:18px;
     padding: 5px 10px;
 }
 
-@mixin search($height:60px, $height-input:35px) {
+@mixin search($height:60px, $height-input:40px) {
     position: relative;
     height: $height;
     width: 284px;
@@ -82,7 +82,7 @@ $font-body-size:18px;
     }
 }
 
-@mixin search-input($height:35px) {
+@mixin search-input($height:40px) {
     position: absolute;
     left: 0;
     z-index: 0;
@@ -138,7 +138,8 @@ $font-body-size:18px;
 
 @mixin header-type-1($height:60px, $url:"../images/platformAddBtn.png") {
     height: $height;
-    &>.title {
+    padding: 0 20px;
+    &>.headtitle {
         display: block;
         height: $height;
         float: left;
@@ -168,10 +169,56 @@ $font-body-size:18px;
 @mixin management($height-header:60px, $height-body:calc(100% - 60px)) {
     &>.header {
         @include header-type-1($height-header);
+        &>.split {
+            float: left;
+            width: 2px;
+            height: 36px;
+            margin-left: 13px;
+            background-color: rgb(181, 183, 198);
+            margin-top: 12px;
+        }
+        &>.buttonList {
+            float: left;
+            &>div {
+                border-style: solid;
+                border-width: 1px;
+                border-color: #fff;
+                border-radius: 2px;
+                display: inline-block;
+                height: $height-header - 20px;
+                line-height: $height-header - 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #fff;
+                font-weight: bold;
+                font-family: "Microsoft YaHei";
+                font-size: 16px;
+                min-width: 110px;
+                text-align: center;
+                cursor: pointer;
+                &:first-child {
+                    margin-left: 16px;
+                    border-left: 1px solid black;
+                }
+                &.checked {
+                    border-color: rgb(131, 224, 255);
+                    color: rgb(255, 255, 255);
+                    background-color: #aae7fb;
+                }
+                &.unchecked {
+                    border-color: rgb(209, 209, 209);
+                    color: rgb(121, 121, 121);
+                    background-color: #fff;
+                }
+            }
+        }
     }
     &>.body {
         height: $height-body;
         @include body();
+        &>div{
+            height: 100%;
+        }
     }
 }
 
@@ -355,11 +402,12 @@ $font-body-size:18px;
     }
 }
 
-@mixin animation($actions){
+@mixin animation($actions) {
     animation: $actions;
     -webkit-animation: $actions;
     -moz-animation: $actions;
 }
+
 @mixin moveto($top) {
     @include animation(move 1s);
     @include keyframes(move) {

@@ -33,10 +33,10 @@ gulp.task('platformCss', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./demo/sass/demo.scss')
+  return gulp.src('./demo/sass/orderManage.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(stripCssComments())
-    .pipe(gulp.dest('./build/sass'));
+    .pipe(gulp.dest('./test/style'));
 });
 
 gulp.task('websass', function () {
