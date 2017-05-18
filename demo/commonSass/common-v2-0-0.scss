@@ -216,9 +216,186 @@ $font-body-size:18px;
     &>.body {
         height: $height-body;
         @include body();
-        &>div{
+        &>div {
             height: 100%;
         }
+    }
+}
+
+@mixin managementB($height-header:60px, $height-body:calc(100% - 120px)) {
+    border-top-left-radius: 3px;
+    &>.header {
+        height: $height-header;
+        background-color: #fff;
+        padding: 0px 15px;
+        &>div {
+            float: left;
+        }
+        &>.backBtn {
+            font-size: 16px;
+            font-weight: bold;
+            background-color: $bg-btn-ok;
+            margin-top: ($height-header - 40px)/2;
+            @include btn-common(40px);
+            min-width: 110px;
+            &>img {
+                float: left;
+                margin-top: 8px;
+                margin-right: 16px;
+            }
+            padding: 0 20px;
+        }
+        &>.split {
+            float: left;
+            width: 2px;
+            height: 34px;
+            margin-left: 10px;
+            margin-right: 15px;
+            background-color: rgb(181, 183, 198);
+            margin-top: ($height-header - 34px)/2;
+        }
+        &>.orderManagePartTitle {
+            height: 40px;
+            line-height: 40px;
+            margin-top: ($height-header - 40px)/2;
+            font-size: 16px;
+            color: rgb(121, 121, 121);
+            font-weight: bold;
+        }
+    }
+    &>.body {
+        height: $height-body;
+        background-color: #fcfcf2;
+        border: 1px solid #ededdb;
+        padding-left: 20px;
+        padding-top: 8px;
+        &>.listStudent {
+            float: left;
+            height: 100%;
+            width: 300px;
+            border: 1px solid #e2e2e2;
+            font-size: 14px;
+            font-family: "SimSun";
+            &>.header {
+                &>.col {
+                    height: 35px;
+                    background-color: #45d1f4;
+                    color: #fff;
+                    &>div {
+                        float: left;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                    }
+                    &>.num {
+                        width: 37px;
+                    }
+                    &>.check {
+                        width: 47px;
+                        border-left: 1px solid #e2e2e2;
+                        &>input {
+                            margin-top: 10px;
+                        }
+                    }
+                    &>.stuname {
+                        width: 87px;
+                        border-left: 1px solid #e2e2e2;
+                    }
+                    &>.stuid {
+                        width: 126px;
+                        border-left: 1px solid #e2e2e2;
+                    }
+                }
+            }
+            &>.body {
+                &>.col {
+                    height: 35px;
+                    color: rgb(121, 121, 121);
+                    border-bottom: 1px solid #e2e2e2;
+                    &>div {
+                        float: left;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                    }
+                    &:nth-child(odd){
+                        background-color: #fff;
+                    }
+                    &:nth-child(even){
+                        background-color: #f5fdff;
+                    }
+                    &>.num {
+                        width: 37px;
+                    }
+                    &>.check {
+                        width: 47px;
+                        border-left: 1px solid #e2e2e2;
+                        &>input {
+                            margin-top: 10px;
+                        }
+                    }
+                    &>.stuname {
+                        width: 87px;
+                        border-left: 1px solid #e2e2e2;
+                    }
+                    &>.stuid {
+                        width: 126px;
+                        border-left: 1px solid #e2e2e2;
+                    }
+                }
+            }
+        }
+        &>.buttonList-y {
+            float: left;
+            width: 143px;
+            height: 100%;
+            padding: 0 20px;
+            position: relative;
+            padding-top: 10%;
+            &>div {
+                background-color: #45d1f4;
+                @include btn-common(40px);
+                font-size: 14px;
+                font-family: "SimSun";
+                color: rgb(252, 252, 242);
+                text-align: center;
+                margin-top: 56px;
+            }
+        }
+        &>.orderList {
+            float: left;
+            width: calc(100% - 443px);
+            height: 100%;
+            border: 1px solid #e2e2e2;
+            background-color: #fff;
+            &>.header {
+                height: 35px;
+                background-color: #45d1f4;
+                color: #fff;
+                font-family: "SimSun";
+                font-size: 14px;
+                font-weight: bold;
+                &>.list-title {
+                    float: left;
+                    height: 35px;
+                    line-height: 35px;
+                    padding: 0 10px;
+                }
+                &>.btn-add {
+                    float: right;
+                    margin: 3px 10px;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    background-color: #24bce2;
+                    height: 29px;
+                    line-height: 29px;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+    &>.footer {
+        height: 60px;
     }
 }
 

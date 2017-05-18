@@ -3,3 +3,7 @@
     @include commonInit();
     @include management();
 }
+#orderManagePart{
+    @include commonInit();
+    @include managementB();
+}

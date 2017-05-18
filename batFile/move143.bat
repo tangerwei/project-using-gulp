@@ -5,4 +5,3 @@ xcopy C:\Users\erwei.tang\project-using-gulp\test\i18n\zh-CN.json \\192.168.7.14
 
 xcopy C:\Users\erwei.tang\project-using-gulp\test\content\orderManage\orderManage.html \\192.168.7.143\aqua\aqua\webapps\teacherpanel_tew_test\content\orderManage /s /h /d /y
 xcopy C:\Users\erwei.tang\project-using-gulp\test\content\orderManage\orderManage.js \\192.168.7.143\aqua\aqua\webapps\teacherpanel_tew_test\content\orderManage /s /h /d /y
-@pause
