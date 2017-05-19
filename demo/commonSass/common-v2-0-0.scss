@@ -222,7 +222,7 @@ $font-body-size:18px;
     }
 }
 
-@mixin managementB($height-header:60px, $height-body:calc(100% - 120px)) {
+@mixin managementB($height-header:60px, $height-body:calc(100% - 102px)) {
     border-top-left-radius: 3px;
     &>.header {
         height: $height-header;
@@ -308,7 +308,16 @@ $font-body-size:18px;
                 }
             }
             &>.body {
-                &>.col {
+                height: calc(100% - 35px);
+                overflow-y: hidden;
+                .mCSB_dragger_bar {
+                    background-color: #5391a6;
+                }
+                .mCSB_draggerRail {
+                    background-color: #e6eff2;
+                    box-shadow: none;
+                }
+                .col {
                     height: 35px;
                     color: rgb(121, 121, 121);
                     border-bottom: 1px solid #e2e2e2;
@@ -318,10 +327,10 @@ $font-body-size:18px;
                         line-height: 35px;
                         text-align: center;
                     }
-                    &:nth-child(odd){
+                    &:nth-child(odd) {
                         background-color: #fff;
                     }
-                    &:nth-child(even){
+                    &:nth-child(even) {
                         background-color: #f5fdff;
                     }
                     &>.num {
@@ -339,7 +348,7 @@ $font-body-size:18px;
                         border-left: 1px solid #e2e2e2;
                     }
                     &>.stuid {
-                        width: 126px;
+                        width: 113px;
                         border-left: 1px solid #e2e2e2;
                     }
                 }
@@ -357,7 +366,7 @@ $font-body-size:18px;
                 @include btn-common(40px);
                 font-size: 14px;
                 font-family: "SimSun";
-                color: rgb(252, 252, 242);
+                color: rgb(83, 145, 166);
                 text-align: center;
                 margin-top: 56px;
             }
@@ -392,6 +401,103 @@ $font-body-size:18px;
                     padding: 0 10px;
                 }
             }
+            &>.body {
+                height: calc(100% - 37px);
+                width: 100%;
+                padding: 5px 10px;
+                overflow-y: auto;
+                &>.items {
+                    position: relative;
+                    min-height: 113px;
+                    max-height: 183px;
+                    border: 1px solid rgb(229, 229, 229);
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 10px;
+                    font-size: 14px;
+                    font-family: "SimSun";
+                    font-weight: bold;
+                    margin-top: 20px;
+                    &:first-child {
+                        margin-top: 10px;
+                    }
+                    &.checked {
+                        border: 1px solid rgb(94, 206, 235);
+                        background-color: rgb(200, 244, 255);
+                        &>.body {
+                            &>.detailsCont {
+                                border-left-color: #45d1f4;
+                            }
+                        }
+                    }
+                    &>.header {
+                        height: 41px;
+                        background-color: rgb(69, 209, 244);
+                        color: #fff;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        &>.list-title {
+                            float: left;
+                            line-height: 41px;
+                            padding: 0 10px;
+                        }
+                        &>.btn-add {
+                            float: right;
+                            margin: 5px 10px;
+                            border: 1px solid #fff;
+                            cursor: pointer;
+                            background-color: #24bce2;
+                            border-radius: 7px;
+                            height: 29px;
+                            line-height: 29px;
+                            padding: 0 10px;
+                            min-width: 73px;
+                            text-align: center;
+                        }
+                    }
+                    &>.body {
+                        position: absolute;
+                        top: 41px;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        &>.checkCont {
+                            float: left;
+                            height: 100%;
+                            width: 43px;
+                            position: relative;
+                            &>.check {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                @include translate(-50%, -50%);
+                                height: 17px;
+                                width: 17px;
+                                border-radius: 50%;
+                                border: 1px solid rgb(198, 198, 198);
+                                background-color: #fff;
+                                padding: 2px;
+                                &>.checked {
+                                    height: 100%;
+                                    width: 100%;
+                                    border-radius: 50%;
+                                    &.true {
+                                        background-color: #45d1f4;
+                                    }
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        &>.detailsCont {
+                            border-left: 1px solid #e5e5e5;
+                            position: absolute;
+                            top: 0;
+                            left: 45px;
+                            right: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
         }
     }
     &>.footer {
@@ -399,9 +505,63 @@ $font-body-size:18px;
     }
 }
 
+@mixin managementC($height:295px, $width:495px, $header-height:40px, $height-footer:80px) {
+    height: $height;
+    width: $width;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    @include translate(-50%, -50%);
+    z-index: $back-zindex + 1;
+    border: 1px solid rgb(23, 123, 169);
+    background-color: $bg-input;
+    &>.header {
+        @include header-type-2($header-height);
+    }
+    &>.body {
+        height: $height - ($header-height + $height-footer);
+        padding: 15px 10px 0px 10px;
+        &>.col {
+            height: 40px;
+            width: 100%;
+            font-family: "SimSun";
+            font-size: 14px;
+            color: rgb(121, 121, 121);
+            margin: 10px 0px;
+            &>label {
+                min-width: 95px;
+                text-align: center;
+                display: block;
+                float: left;
+                line-height: 40px;
+            }
+            &>input {
+                @include input-common-style(323px);
+                height: 36px;
+                margin-top: 2px;
+            }
+            &>select {
+                height: 36px;
+                margin-top: 2px;
+                width: 216px;
+                border: solid 1px #e2e2e2;
+            }
+            &>div {
+                height: 36px;
+                line-height: 36px;
+            }
+        }
+    }
+    &>.footer {
+        @include footer-buttons($height-footer);
+        font-size: 18px;
+        font-family: "HiraginoSansGB";
+    }
+}
+
 @mixin close-icon() {
     float: right;
-    background-image: url(../images/close.png);
+    background-image: url(../images/lecture_list/close.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 20px;
