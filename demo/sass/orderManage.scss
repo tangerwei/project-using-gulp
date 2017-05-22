@@ -4,6 +4,7 @@
     @include management();
 }
 #orderManagePart{
+    height: 100%;
     @include commonInit();
     @include managementB();
 }

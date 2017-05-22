@@ -222,6 +222,18 @@ $font-body-size:18px;
     }
 }
 
+@mixin flex-y-center() {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+}
+
 @mixin managementB($height-header:60px, $height-body:calc(100% - 102px)) {
     border-top-left-radius: 3px;
     &>.header {
@@ -359,16 +371,57 @@ $font-body-size:18px;
             width: 143px;
             height: 100%;
             padding: 0 20px;
-            position: relative;
-            padding-top: 10%;
-            &>div {
+            @include flex-y-center();
+            &>div.btn {
+                cursor: pointer;
                 background-color: #45d1f4;
-                @include btn-common(40px);
-                font-size: 14px;
-                font-family: "SimSun";
-                color: rgb(83, 145, 166);
-                text-align: center;
-                margin-top: 56px;
+                width: 102px;
+                height: 66px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(93, 161, 192);
+                background-color: rgb(69, 209, 244);
+                color: #fff;
+                padding-left: 8px;
+                border-radius: 8px;
+                margin-top: 60px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &>span {
+                    height: 64px;
+                    float: right;
+                    font-size: 18px;
+                    word-wrap: break-word;
+                    width: 52px;
+                    padding: 8px;
+                    padding-left: 0px;
+                }
+                &.order-stu-resave {
+                    &:before {
+                        content: "+";
+                        font-size: 58px;
+                    }
+                }
+                &.order-stu-save {
+                    &.nocheck {
+                        &>img {
+                            margin-top: 19px;
+                            margin-left: 5px;
+                        }
+                    }
+                    &.oncheck {
+                        &:before {
+                            content: "\2713";
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+            &>div.tip {
+                font-size: 12px;
+                font-family: "Adobe Heiti Std";
+                color: rgb(173, 173, 173);
             }
         }
         &>.orderList {
@@ -408,8 +461,7 @@ $font-body-size:18px;
                 overflow-y: auto;
                 &>.items {
                     position: relative;
-                    min-height: 113px;
-                    max-height: 183px;
+                    height: 183px;
                     border: 1px solid rgb(229, 229, 229);
                     background-color: rgb(255, 255, 255);
                     border-radius: 10px;
@@ -426,6 +478,41 @@ $font-body-size:18px;
                         &>.body {
                             &>.detailsCont {
                                 border-left-color: #45d1f4;
+                            }
+                        }
+                    }
+                    &.disabled {
+                        &>.header {
+                            background-color: #dadada;
+                            &>.btn-add {
+                                background-color: #cfcfcf;
+                            }
+                        }
+                        &>.body {
+                            background-color: #f5f5f5;
+                            &>.detailsCont .item {
+                                background-color: #fcfcfc;
+                                border-color: rgb(217, 217, 217);
+                                color: rgb(201, 201, 201);
+                                &>.ites-1>div {
+                                    border: 1px solid #e5e5e5;
+                                    background-color: #fff;
+                                }
+                                &>.ites-2 {
+                                    border-left-color: #d9d9d9;
+                                }
+                                &.choosed {
+                                    color: #fff;
+                                    background-color: #d9d9d9;
+                                    border-color: rgb(217, 217, 217);
+                                    &>.ites-1>div {
+                                        background-color: #d9d9d9;
+                                        border: 2px solid #fff;
+                                    }
+                                    &>.ites-2 {
+                                        border-left-color: #fff;
+                                    }
+                                }
                             }
                         }
                     }
@@ -494,6 +581,65 @@ $font-body-size:18px;
                             left: 45px;
                             right: 0;
                             bottom: 0;
+                            padding: 5px;
+                            padding-top: 10px;
+                            & .item {
+                                float: left;
+                                width: 146px;
+                                height: 54px;
+                                border-style: solid;
+                                border-width: 1px;
+                                border-color: rgb(186, 233, 245);
+                                box-shadow: 0px 3px 7px 0px rgba(72, 195, 211, 0.1);
+                                border-radius: 8px 6px;
+                                cursor: pointer;
+                                color: rgb(9, 181, 224);
+                                font-size: 14px;
+                                -moz-transform: matrix( 1.00194453121316, 0, 0, 1, 0, 0);
+                                -webkit-transform: matrix( 1.00194453121316, 0, 0, 1, 0, 0);
+                                -ms-transform: matrix( 1.00194453121316, 0, 0, 1, 0, 0);
+                                padding: 4px 0;
+                                background-color: #f5fdff;
+                                margin: 4px 10px;
+                                &.choosed {
+                                    border-color: rgb(69, 209, 244);
+                                    background-color: rgb(69, 209, 244);
+                                    color: #fff;
+                                    &>.ites-1>div {
+                                        border: 2px solid #fff;
+                                        background-color: rgb(69, 209, 244);
+                                    }
+                                    &>.ites-2 {
+                                        border-left-color: #fff;
+                                    }
+                                }
+                                &>.ites-1 {
+                                    width: 32px;
+                                    height: 100%;
+                                    position: relative;
+                                    float: left;
+                                    &>div {
+                                        position: absolute;
+                                        width: 14px;
+                                        height: 14px;
+                                        top: 50%;
+                                        left: 50%;
+                                        @include translate(-50%, -50%);
+                                        border: 1px solid #e5e5e5;
+                                    }
+                                }
+                                &>.ites-2 {
+                                    float: right;
+                                    width: calc(100% - 32px);
+                                    border-left: 1px solid rgb(69, 209, 244);
+                                    padding-left: 10px;
+                                    &>.ites-col {
+                                        height: 22px;
+                                        line-height: 22px;
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
