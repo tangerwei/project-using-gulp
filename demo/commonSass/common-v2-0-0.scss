@@ -320,7 +320,7 @@ $font-body-size:18px;
                 }
             }
             &>.body {
-                height: calc(100% - 35px);
+                height:calc(100% -35px);
                 overflow-y: hidden;
                 .mCSB_dragger_bar {
                     background-color: #5391a6;
@@ -385,7 +385,7 @@ $font-body-size:18px;
                 padding-left: 8px;
                 border-radius: 8px;
                 margin-top: 60px;
-                &:first-child{
+                &:first-child {
                     margin-top: 0;
                 }
                 &>span {
@@ -430,6 +430,7 @@ $font-body-size:18px;
             height: 100%;
             border: 1px solid #e2e2e2;
             background-color: #fff;
+            position: relative;
             &>.header {
                 height: 35px;
                 background-color: #45d1f4;
@@ -455,10 +456,14 @@ $font-body-size:18px;
                 }
             }
             &>.body {
-                height: calc(100% - 37px);
-                width: 100%;
                 padding: 5px 10px;
                 overflow-y: auto;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin-top: 40px;
                 &>.items {
                     position: relative;
                     height: 183px;
@@ -478,6 +483,7 @@ $font-body-size:18px;
                         &>.body {
                             &>.detailsCont {
                                 border-left-color: #45d1f4;
+                                
                             }
                         }
                     }
@@ -547,7 +553,7 @@ $font-body-size:18px;
                         left: 0;
                         bottom: 0;
                         right: 0;
-                        &>.checkCont {
+                        & .checkCont {
                             float: left;
                             height: 100%;
                             width: 43px;
@@ -574,7 +580,7 @@ $font-body-size:18px;
                                 }
                             }
                         }
-                        &>.detailsCont {
+                        & .detailsCont {
                             border-left: 1px solid #e5e5e5;
                             position: absolute;
                             top: 0;
