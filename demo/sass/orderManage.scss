@@ -1,5 +1,7 @@
 @import '../commonSass/common-v2-0-0.scss';
 #orderManageList {
+    height: 100%;
+    width: 100%;
     @include commonInit();
     @include management();
 }

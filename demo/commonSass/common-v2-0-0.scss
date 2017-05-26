@@ -215,9 +215,14 @@ $font-body-size:18px;
     }
     &>.body {
         height: $height-body;
+        width: calc(100% - 15px);
         @include body();
         &>div {
             height: 100%;
+        }
+        span.labeloptions{
+            cursor: pointer;
+            color: rgb(46, 162, 215);
         }
     }
 }
@@ -304,9 +309,31 @@ $font-body-size:18px;
                     }
                     &>.check {
                         width: 47px;
+                        height: 100%;
                         border-left: 1px solid #e2e2e2;
-                        &>input {
-                            margin-top: 10px;
+                        position: relative;
+                        &>div {
+                            position: absolute;
+                            border-radius: 2px;
+                            height: 14px;
+                            width: 14px;
+                            top: 50%;
+                            left: 50%;
+                            @include translate(-50%, -50%);
+                            border: 1px solid #e5e5e5;
+                            background-color: #fff;
+                            cursor: pointer;
+                            padding: 1px;
+                            &>div {
+                                background-color: #fff;
+                                height: 100%;
+                                border-radius: 2px;
+                            }
+                            &.checked {
+                                &>div {
+                                    background-color: #45d1f4;
+                                }
+                            }
                         }
                     }
                     &>.stuname {
@@ -320,7 +347,7 @@ $font-body-size:18px;
                 }
             }
             &>.body {
-                height:calc(100% -35px);
+                height: calc(100% -35px);
                 overflow-y: hidden;
                 .mCSB_dragger_bar {
                     background-color: #5391a6;
@@ -350,9 +377,31 @@ $font-body-size:18px;
                     }
                     &>.check {
                         width: 47px;
+                        height: 100%;
                         border-left: 1px solid #e2e2e2;
-                        &>input {
-                            margin-top: 10px;
+                        position: relative;
+                        &>div {
+                            position: absolute;
+                            border-radius: 2px;
+                            height: 14px;
+                            width: 14px;
+                            top: 50%;
+                            left: 50%;
+                            @include translate(-50%, -50%);
+                            border: 1px solid #e5e5e5;
+                            background-color: #fff;
+                            cursor: pointer;
+                            padding: 1px;
+                            &>div {
+                                background-color: #fff;
+                                height: 100%;
+                                border-radius: 2px;
+                            }
+                            &.checked {
+                                &>div {
+                                    background-color: #45d1f4;
+                                }
+                            }
                         }
                     }
                     &>.stuname {
@@ -483,7 +532,6 @@ $font-body-size:18px;
                         &>.body {
                             &>.detailsCont {
                                 border-left-color: #45d1f4;
-                                
                             }
                         }
                     }
