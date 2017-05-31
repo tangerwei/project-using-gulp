@@ -78,3 +78,16 @@ gulp.task('buildcode', function () {
     .pipe(stripCssComments())
     .pipe(gulp.dest('./code/css'));
 })
+
+
+const currentConfig = {
+  target:'currentTask',
+  src:'./demo/sass/orderManage.scss'
+}
+
+gulp.task(currentConfig.target, function () {
+  return gulp.src(currentConfig.src)
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(stripCssComments())
+    .pipe(gulp.dest('./test/style'));
+});

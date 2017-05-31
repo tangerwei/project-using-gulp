@@ -216,11 +216,12 @@ $font-body-size:18px;
     &>.body {
         height: $height-body;
         width: calc(100% - 15px);
+        margin-left: 7px;
         @include body();
         &>div {
             height: 100%;
         }
-        span.labeloptions{
+        span.labeloptions {
             cursor: pointer;
             color: rgb(46, 162, 215);
         }
@@ -743,8 +744,19 @@ $font-body-size:18px;
             &>select {
                 height: 36px;
                 margin-top: 2px;
-                width: 216px;
+                width: 250px;
                 border: solid 1px #e2e2e2;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("../images/wordsrc_btn.png");
+                background-repeat: no-repeat;
+                background-position: 95%;
+                cursor: pointer;
+                font-size: 14px;
+                font-family: "Adobe Heiti Std";
+                color: rgb(121, 121, 121);
+                padding-left: 10px;
+                padding-right: 30px;
             }
             &>div {
                 height: 36px;

@@ -2,18 +2,22 @@
 #orderManageList {
     height: 100%;
     width: 100%;
+    overflow: hidden;
     @include commonInit();
     @include management();
 }
-#orderManagePart{
+
+#orderManagePart {
     height: 100%;
     @include commonInit();
     @include managementB();
 }
-#orderManageACBack{
+
+#orderManageACBack {
     @include back();
 }
-#orderManageAC{
+
+#orderManageAC {
     @include commonInit();
     @include managementC();
 }

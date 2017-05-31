@@ -8,6 +8,7 @@
     "gulp-sass": "gulp sass",
     "websass": "gulp websass",
     "gulpBabel": "gulp buildcode",
+    "sass":"gulp currentTask",
     "babel": "babel ./code/jsx/index.jsx --presets react"
   },
   "repository": {
