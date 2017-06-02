@@ -1,0 +1,17 @@
+@import '../commonSass/common-v2-0-0.scss';
+
+#categoryMngList{
+    @include borderBox();
+    @include managementD();
+}
+#categoryMngAdd{
+    @include borderBox();
+    @include managementE();
+}
+#categoryDelBack{
+    @include back();
+}
+#categoryDel{
+    @include borderBox();
+    @include templeback();
+}
