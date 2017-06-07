@@ -1,0 +1,9 @@
+@import '../commonSass/common-v2-0-0.scss';
+
+#productInventoryBack{
+    @include back();
+}
+#productInventory{
+    @include borderBox();
+    @include temple2();
+}

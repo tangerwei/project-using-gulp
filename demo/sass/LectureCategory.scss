@@ -3,15 +3,16 @@
 #categoryMngList{
     @include borderBox();
     @include managementD();
+    height: 100%;
 }
 #categoryMngAdd{
     @include borderBox();
     @include managementE();
 }
-#categoryDelBack{
+#categoryDelBack,#ErrorMSGBack{
     @include back();
 }
-#categoryDel{
+#categoryDel,#ErrorMSG{
     @include borderBox();
     @include templeback();
 }

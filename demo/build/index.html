@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='build.css' type='text/css' rel='stylesheet'/>
+</head>
+<body>
+    <div id="productInventory">
+    <div class="header">
+        {{MENU_MNG_PLATFORM_PAGES_DEL_TITLE}}
+        <div id='productInventory_close' class="closeIcon"></div>
+    </div>
+    <div class="body">
+        <div class="table">
+            <div>
+                <div class="th">当前库存</div>
+                <div class="th">已销售库存</div>
+                <div class="th">库存总量</div>
+            </div>
+            <div>
+                <div id="inventory_mes1" class="td">0</div>
+                <div id="inventory_mes2" class="td">0</div>
+                <div id="inventory_mes3" class="td">0</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="invenorySelector" class="selector"></div>
+            <input id="invenorySelectorDetail" />
+        </div>
+    </div>
+    <div class="footer">
+        <div id="productInventory_ok">{{DIALOG_OK_DL}}</div>
+        <div id="productInventory_cancel" class="cancel">{{DIALOG_CANCEL_DL}}</div>
+    </div>
+</div>
+</body>
+</html>

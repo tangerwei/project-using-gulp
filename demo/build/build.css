@@ -1,0 +1,145 @@
+@charset "UTF-8";
+#productInventoryBack {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.298039);
+}
+
+#productInventory {
+    height: 238px;
+    width: 484px;
+    position: absolute;
+    z-index: 101;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #177ba9;
+}
+
+#productInventory * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#productInventory>.header {
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    background-color: #2ea2d7;
+    color: #fff;
+    font-size: 18px;
+    font-family: "HiraginoSansGB";
+    text-shadow: 0px -1px 0px rgba(1, 1, 1, 0.75);
+    padding: 0 20px;
+}
+
+#productInventory>.header>.closeicon {
+    float: right;
+    background-image: url(../images/word_library_dialog.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#productInventory>.body {
+    font-size: 14px;
+    font-family: "SimSun";
+    color: #797979;
+    margin: 10px 20px 0 20px;
+    height: calc(100% - 120px);
+    padding-top: 4px;
+}
+
+#productInventory>.body>div {
+    width: 445px;
+}
+
+#productInventory>.body>div.table {
+    border: 1px solid #e2e2e2;
+}
+
+#productInventory>.body>div.table>div {
+    height: 34px;
+}
+
+#productInventory>.body>div.table>div .th {
+    float: left;
+    width: 33.333%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 17px;
+    background-color: #45d1f4;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-left: 1px solid #e2e2e2;
+}
+
+#productInventory>.body>div.table>div .th:first-child {
+    border-left: none;
+}
+
+#productInventory>.body>div.table>div .td {
+    float: left;
+    width: 33.333%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 17px;
+    color: #797979;
+    text-align: center;
+    border-left: 1px solid #e2e2e2;
+}
+
+#productInventory>.body>div.table>div .td:first-child {
+    border-left: none;
+}
+
+#productInventory>.body>div.col {
+    margin-top: 10px;
+}
+
+#productInventory>.body>div.col>* {
+    border: 1px solid #c6c6c6;
+    height: 34px;
+}
+
+#productInventory>.body>div.col .selector {
+    float: left;
+    width: 149px;
+}
+
+#productInventory>.body>div.col input {
+    width: 288px;
+    margin-left: 8px;
+}
+
+#productInventory>.footer>div {
+    color: white;
+    border: 1px solid #597f89;
+    width: 153px;
+    height: 42px;
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 17px;
+    margin-right: 20px;
+    background-color: #2ea2d7;
+}
+
+#productInventory>.footer>div.cancel {
+    background-color: #5da1c0;
+}
