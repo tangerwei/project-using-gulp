@@ -80,26 +80,21 @@ gulp.task('buildcode', function () {
 })
 
 
-// const currentConfig = {
-//   target:'currentTask',
-//   src:'./demo/sass/LectureCategory.scss'
-// }
-
-// gulp.task(currentConfig.target, function () {
-//   return gulp.src(currentConfig.src)
-//     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-//     .pipe(stripCssComments())
-//     .pipe(gulp.dest('./test/style'));
-// });
-
 const currentConfig = {
   target:'currentTask',
-  src:'./demo/sass/build.scss'
+  src:'./demo/sass/orderManage.scss',
+  path:'./test/style'
 }
+
+// const currentConfig = {
+//   target:'currentTask',
+//   src:'./demo/sass/build.scss',
+//   path:'./demo/build'
+// }
 
 gulp.task(currentConfig.target, function () {
   return gulp.src(currentConfig.src)
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(stripCssComments())
-    .pipe(gulp.dest('./demo/build'));
+    .pipe(gulp.dest(currentConfig.path));
 });
