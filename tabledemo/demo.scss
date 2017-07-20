@@ -1,0 +1,19 @@
+@mixin borderBox {
+    & * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+#tableContainer {
+    @include borderBox();
+    table {
+        border-collapse:collapse;
+        font-size: 14px;
+        th,td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+}

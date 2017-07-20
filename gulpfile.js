@@ -82,8 +82,8 @@ gulp.task('buildcode', function () {
 
 const currentConfig = {
   target:'currentTask',
-  src:'./demo/sass/orderManage.scss',
-  path:'./test/style'
+  src:'./tabledemo/demo.scss',
+  path:'./tabledemo/style'
 }
 
 // const currentConfig = {
